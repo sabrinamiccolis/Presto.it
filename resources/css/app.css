@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Righteous&display=swap');
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+    --greenLight: #defb06;
+    --greenDark: #9fe93f;
+    --blackColor: #1f2426;
+    --greenDarkShdw: #9fe93f94;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-black {
+    background-color: var(--blackColor);
+}
+
+.bg-greenLight:hover {
+    background-color: var(--greenLight);
+    transition-duration: 0.4s;
+}
+
+.bg-blackColor {
+    background-color: var(--blackColor);
+}
+
+.bg-greenDark {
+    background-color: var(--greenDark);
+}
+
+/* stile header h1, h2, h3, h4, h5 */
+
+.headerColor {
+    background-color: var(--blackColor);
+    color: var(--greenDark);
+}
+
+/* Stile body */
+
+.body_bg { 
+    /* background-color: #fdfdfd;
+    background-image: linear-gradient(170deg, #fdfdfd 20%, #1f2426 54%); */
+    background-color: #f0f0e8;
+}
+
+.bg-opac {
+    background-color: #1f2426e4;
+}
+
+/* Stili card */
+.tag_img {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.tag {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+}
+
+/* stili button */
+
+.btnNav {
+    @apply
+    bg-greenDark
+    rounded-full 
+    px-2 
+    py-2
+    text-black 
+    bg-greenLight 
+    transition 
+    duration-150 
+    text-center 
+    uppercase 
+    
+}
+
+.btn {
+    @apply 
+    inline-block 
+    rounded-full 
+    bg-greenDark 
+    px-6 
+    pb-1 
+    pt-1.5 
+    text-sm 
+    font-medium 
+    uppercase 
+    leading-normal 
+    text-black
+    hover:shadow-[#9fe93f] 
+    transition 
+    duration-150 
+    ease-in-out 
+    bg-greenLight 
+    focus:outline-none focus:ring-0  
+}
+
+.btn-refuse {
+    @apply 
+    inline-block 
+    rounded-full 
+    bg-red-500 
+    px-6 
+    pb-1 
+    pt-1.5 
+    text-sm 
+    font-medium 
+    uppercase 
+    leading-normal 
+    text-black
+    hover:shadow-[#9fe93f] 
+    transition 
+    duration-150 
+    ease-in-out 
+    bg-greenLight 
+    focus:outline-none focus:ring-0 
+}
+
+.btnSocial {
+    @apply 
+    inline-block 
+    rounded-full
+    bg-greenDark
+    mx-3 
+    px-2
+    py-2 
+    text-xs 
+    font-medium 
+    uppercase 
+    leading-normal 
+    text-white 
+    shadow-[0_4px_9px_-4px_#3b71ca] 
+    transition 
+    duration-150 
+    ease-in-out 
+    bg-greenLight 
+    hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] 
+    focus:bg-[#9fe93f] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none 
+    focus:ring-0 
+    active:bg-[#9fe93f] 
+    active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] 
+}
+
+.btnAds {
+    @apply 
+    rounded-md
+    bg-[#9fe93f94]
+    border-2
+    border-[#9fe93f]
+    hover:border-[#76ab30]
+    px-1
+    py-0.5
+    uppercase 
+    text-black
+    hover:shadow-[#9fe93f] 
+    hover:bg-[#9fe93f]
+    font-semibold
+}
+
+/* stili ancor a */
+
+
+/* stili liste ul, ol, li */
+
+
+/* stili form */
+
+
+.input-form {
+    @apply 
+    shadow 
+    border 
+    rounded 
+    py-2 
+    px-3 
+    text-gray-700 
+    mb-3 
+    w-full 
+    focus:outline-none 
+    focus:shadow
+    focus:border-2
+    active:border-2
+    active:border-[#9fe93f]
+}
+
+.label-form {
+    @apply 
+    block 
+    text-gray-700 
+    text-sm 
+    font-bold 
+    mb-2
+    uppercase
+}
+
+.check-form {
+    @apply 
+    relative 
+    float-left 
+    -ml-[1.5rem] 
+    mr-[6px] 
+    mt-[0.15rem] 
+    h-[1.125rem] 
+    w-[1.125rem] 
+    appearance-none 
+    rounded-[0.25rem] 
+    border-[0.125rem] 
+    border-solid 
+    border-neutral-300 
+    outline-none 
+    before:pointer-events-none 
+    before:absolute 
+    before:h-[0.875rem] 
+    before:w-[0.875rem] 
+    before:scale-0 
+    before:rounded-full 
+    before:bg-transparent 
+    before:opacity-0 
+    before:shadow-[0px_0px_0px_13px_transparent] 
+    before:content-[''] 
+    checked:border-[#9fe93f] 
+    checked:bg-[#9fe93f] 
+    checked:before:opacity-[0.16] 
+    checked:after:absolute 
+    checked:after:-mt-px 
+    checked:after:ml-[0.25rem] 
+    checked:after:block 
+    checked:after:h-[0.8125rem] 
+    checked:after:w-[0.375rem] 
+    checked:after:rotate-45 
+    checked:after:border-[0.125rem] 
+    checked:after:border-l-0 
+    checked:after:border-t-0 
+    checked:after:border-solid 
+    checked:after:border-white 
+    checked:after:bg-transparent 
+    checked:after:content-[''] 
+    hover:cursor-pointer 
+    hover:before:opacity-[0.04] 
+    hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] 
+    focus:shadow-none 
+    focus:transition-[border-color_0.2s] 
+    focus:before:scale-100 
+    focus:before:opacity-[0.12] 
+    focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] 
+    focus:before:transition-[box-shadow_0.2s,transform_0.2s] 
+    focus:after:absolute 
+    focus:after:z-[1] 
+    focus:after:block 
+    focus:after:h-[0.875rem] 
+    focus:after:w-[0.875rem] 
+    focus:after:rounded-[0.125rem] 
+    focus:after:content-[''] 
+    checked:focus:before:scale-100 
+    checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] 
+    checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] 
+    checked:focus:after:-mt-px 
+    checked:focus:after:ml-[0.25rem] 
+    checked:focus:after:h-[0.8125rem] 
+    checked:focus:after:w-[0.375rem] 
+    checked:focus:after:rotate-45 
+    checked:focus:after:rounded-none 
+    checked:focus:after:border-[0.125rem] 
+    checked:focus:after:border-l-0 
+    checked:focus:after:border-t-0 
+    checked:focus:after:border-solid 
+    checked:focus:after:border-white 
+    checked:focus:after:bg-transparent 
+}
+
+.link-text {
+    @apply 
+    text-danger 
+    transition 
+    duration-150 
+    ease-in-out 
+    hover:text-danger-600 
+    focus:text-danger-600 
+    active:text-danger-700
+}
+
+.esaPath {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.circlePath {
+    clip-path: circle(50% at 50% 50%);
+}
+
+/* Nascondi il contenitore di ricerca per impostazione predefinita */
+#searchContainer.hidden {
+    display: none;
+}
+
+/* Mostra il contenitore di ricerca */
+#searchContainer.visible {
+    display: flex;
+}
+
+.fi {
+    font-size: 2rem;
+}
+
+
+/* Stile per la barra di scorrimento */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+/* Stile per il tracciato della barra di scorrimento */
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f0f0e8; /* Colore di sfondo */
+}
+
+/* Stile per il "pollice" della barra di scorrimento */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--blackColor); /* Colore del pollice */
+    border-radius: 3px;
+}
+
+/* Cambia il colore del "pollice" al passaggio del mouse */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--greenDark); /* Colore al hover */
+}
+
+
+.text-gray-800 {
+    color: gray;
+}
+
+.text-success-800 {
+    color: green;
+}
+
+.text-warning-800 {
+    color: orange;
+}
+
+.text-red-800 {
+    color: red;
+}
+
